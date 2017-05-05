@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_3_1</title>
+</head>
+<body>
+    <label>名称</label>
+    <input id="input1" type="text">
+    <button id="button1" type="submit">验证</button>
+    <div id="tips1">必填，长度为4-16个字符</div>
+
+<script type="text/javascript">
+        var button1 = document.getElementById("button1");
+        var tips1 = document.getElementById("tips1");
+
+        button1.onclick = function () {
+            var input1 = document.getElementById("input1");
+            if (input1.value == "" || input1.value == null) {
+                tips1.innerHTML = "姓名不能为空";
+            }else if(input1.value.length<4 || input1.value.length>16){
+                tips1.innerHTML = "必填，长度为4-16个字符";
+            }else {
+                tips1.innerHTML="名称格式正确";
+            }
+        }
+</script>
+</body>
+
+</html>
